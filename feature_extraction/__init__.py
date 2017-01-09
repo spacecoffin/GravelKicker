@@ -1,5 +1,4 @@
-#from .stats import featurize, get_stats
-from .stats import *
+from .stats import featurize
+from .stats import get_stats
 
 __all__ = ['featurize', 'get_stats']
-#__all__ = [_ for _ in dir() if not _.startswith('_')]

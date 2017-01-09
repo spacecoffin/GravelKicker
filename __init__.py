@@ -2,9 +2,13 @@
 # -*- coding: utf-8 -*-
 """Top-level module for GravelKicker"""
 
-from . import feature_extraction
-from . import generators
-from . import utils
+from GravelKicker import feature_extraction
+from GravelKicker import generator
+from GravelKicker import util
 
-__all__ = ['feature_extraction', 'generators', 'utils']
+#import feature_extraction
+#import generator
+#import util
+
+__all__ = ['feature_extraction', 'generator', 'util']
 # __all__ = [_ for _ in dir() if not _.startswith('_')]

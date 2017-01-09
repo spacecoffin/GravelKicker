@@ -2,6 +2,9 @@ import numpy as np
 import pandas as pd
 import librosa
 
+__all__ = ['featurize', 'get_stats']
+
+
 def get_stats(y):
     _mean = np.mean(y.T, axis=0)
     _min = np.amin(y.T, axis=0)
