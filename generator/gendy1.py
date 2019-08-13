@@ -37,14 +37,18 @@ def gen_min_max_freq(size=1, lambda_=0.7):
     return librosa.core.midi_to_hz(m_arr).reshape(2, size).T
 
 
-def gen_params(rows=1, lambda_=0.7, M=100, n=12, N=65):
+def gen_params(dists=False, rows=1, lambda_=0.7, M=100, n=12, N=65):
     """Generate a numpy matrix of parameters for Gendyn synths"""
 
     param_and_scale_arr = np.random.uniform(low=0.0001, 
                                             high=1.0, 
                                             size=4*rows).reshape(rows, 4)
 
-    dist_arr = np.random.randint(6, size=2*rows).reshape(rows, 2)
+    if dists:
+        _amp_dist, _dur_dist = dists
+        dist_arr = np.tile([_amp_dist, _dur_dist], rows).reshape(rows, 2)
+    else:
+        dist_arr = np.random.randint(6, size=2*rows).reshape(rows, 2)
 
     knum_arr = (stats.hypergeom.rvs(M=M, 
                                 n=n, 

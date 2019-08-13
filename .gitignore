@@ -1,0 +1,16 @@
+# Temporary sound files
+__gen_files/
+
+# OSX files
+.DS_Store
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IntelliJ IDEA files
+.idea/
+GravelKicker.iml

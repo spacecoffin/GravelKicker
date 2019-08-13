@@ -41,7 +41,7 @@ def get_stats(y):
 # Non-dict outputs (summary features, spectral features) tuple
 # Output formats: "dict", "df" for DataFrame, "np" for np.array
 # If out=="np" && concat==True, summary and spectral stats are returned as a single array.
-def featurize(y, sr=44100, out="np", concat=True):
+def featurize(y, sr=22050, out="np", concat=True):
     # Normalize amplitude values of y
     # TODO: Should we only normalize when there is an out of bounds value, i.e. check first?
     _y_normed = librosa.util.normalize(y)
