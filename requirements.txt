@@ -8,7 +8,7 @@ audioread==2.1.7
 Babel==2.7.0
 backcall==0.1.0
 black==19.3b0
-bleach==3.1.2
+bleach==3.3.0
 -e git+https://github.com/josiah-wolf-oberholtzer/BregmanToolkit.git@94288d5b74ba4f90a5ac1c3aac33d261508d64b9#egg=Bregman
 certifi==2019.3.9
 chardet==3.0.4
